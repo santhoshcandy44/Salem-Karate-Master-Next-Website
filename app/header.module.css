@@ -1,0 +1,201 @@
+.h_sticky_navbar {
+    padding: 0;
+}
+
+.h_sticky_navbar_sticky {
+    padding: 0;
+    box-shadow: 0 1px 5px 0 #230800;
+    background: #230800;
+}
+
+.h_sticky_navbar a,.h_sticky_navbar_sticky a {
+    color: white;
+}
+
+
+
+.h_sticky_navbar .hamburger_lines,
+.h_sticky_navbar_sticky .hamburger_lines,
+
+.h_sticky_navbar input[type="checkbox"],
+
+.h_sticky_navbar_sticky input[type="checkbox"] 
+{
+    display: none;
+}
+
+.nav_container {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+.navbar_container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+
+.menu_items {
+    order: 2;
+    display: flex;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.logo {
+    order: 1;
+    font-size: 2.3rem;
+}
+
+.menu_items li {
+    list-style: none;
+    margin-left: 1.5rem;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+.h_sticky_navbar a, .h_sticky_navbar_sticky a {
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.h_sticky_navbar a:hover,
+.h_sticky_navbar_sticky a:hover {
+    color: orange;
+}
+
+.h_sticky_navbar .active,
+.h_sticky_navbar_sticky .active {
+    color: orange;
+}
+
+
+
+
+@media (max-width: 1200px) {
+    
+    
+    .logo {
+        position: absolute;
+        top: 16px;
+        left: 80px;
+        font-size: 24px;
+    }
+
+
+    
+    
+
+    .navbar_container .hamburger_lines,
+     .navbar_container input[type="checkbox"] {
+        display: block;
+        height: 28px;
+        width: 35px;
+        top: 20px;
+        left: 20px;
+        position: absolute;
+    }
+
+    .h_sticky_navbar,  .h_sticky_navbar_sticky {
+        opacity: 0.95;
+        background-color: #230800;
+        
+    }
+
+    .navbar_container {
+        display: block;
+        position: relative;
+        height: 64px;
+    }
+
+    .navbar_container input[type="checkbox"] {
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .navbar_container .hamburger_lines {
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .navbar_container .hamburger_lines .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: white;
+
+       
+    }
+
+    .navbar_container .hamburger_lines .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar_container .hamburger_lines .line2 {
+        transition: transform 0.2s ease-in-out;
+
+    }
+
+    .navbar_container .hamburger_lines .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.3s ease-in-out;
+
+    }
+
+    .h_sticky_navbar .menu_items,   .h_sticky_navbar_sticky .menu_items {
+        box-shadow: 0 1px 5px 0 #aaa;
+        padding-top: 100px;
+        padding-left: 16px;
+        height: 100vh;
+        max-width: 320px;
+        transform: translateX(-150%);
+        display: block;
+        flex-direction: column;
+        transition: transform 0.5s ease-in-out;
+        overflow: hidden;
+        background-color:#230800;
+
+        
+    }
+
+    .h_sticky_navbar .menu_items li,  .h_sticky_navbar_sticky .menu_items li {
+        margin-bottom: 1.8rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+    
+
+    .navbar_container input[type="checkbox"]:checked ~ .menu_items {
+        transform: translateX(0);
+    }
+
+    .navbar_container input[type="checkbox"]:checked ~ .hamburger_lines .line1 {
+        transform: rotate(45deg);
+    }
+
+    .navbar_container input[type="checkbox"]:checked ~ .hamburger_lines .line2 {
+        transform: scaleY(0);
+    }
+
+    .navbar_container input[type="checkbox"]:checked ~ .hamburger_lines .line3 {
+        transform: rotate(-45deg);
+    }
+
+    .navbar_container input[type="checkbox"]:checked ~ .logo_wrapper {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar_container input[type="checkbox"]:checked ~ .logo_wrapper {
+        display: none;
+    }
+}
