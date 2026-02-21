@@ -45,7 +45,7 @@ function DownloadForms() {
               display: 'inline-block',
               color: 'white'
             }}
-            href="/forms/form.pdf"
+            href="/form.pdf"
             download="form.pdf"
           >
             Download Here
