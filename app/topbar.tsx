@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faTwitter, faInstagram,faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faXTwitter, faInstagram,faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
@@ -28,7 +28,7 @@ const TopBar = () => {
       </div>
       <div className="social-icons">
         <a
-          href="#"
+          href="https://www.facebook.com/people/Salem-Karate-Nataraj/100008211948588/"
           target="_blank"
           rel="noopener noreferrer"
           className="top-bar-social-icon"
@@ -36,15 +36,15 @@ const TopBar = () => {
           <FontAwesomeIcon icon={faFacebookF} size="1x" />
         </a>
         <a
-          href="#"
+          href="https://x.com/KarateNataraj"
           target="_blank"
           rel="noopener noreferrer"
           className="top-bar-social-icon"
         >
-          <FontAwesomeIcon icon={faTwitter} />
+          <FontAwesomeIcon icon={faXTwitter} />
         </a>
         <a
-          href="#"
+          href="https://www.instagram.com/salemkaratenataraj/"
           target="_blank"
           rel="noopener noreferrer"
           className="top-bar-social-icon"
@@ -53,7 +53,7 @@ const TopBar = () => {
         </a>
 
         <a
-          href="#"
+          href="https://www.youtube.com/@SKNsalemkaratenataraj"
           target="_blank"
           rel="noopener noreferrer"
           className="top-bar-social-icon"
